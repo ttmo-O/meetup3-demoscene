@@ -1,6 +1,6 @@
 # meetup3-demoscene
 
-dwitter.net'deki demolar ile hazırlanan meetup #3 intro demoscene
+dwitter.net'deki demolar ile hazırlanan meetup #3 intro demoscene (Canlı: http://ttmo.re/meetup3-demoscene/demo.html)
 
 js demo motoru olarak https://github.com/sigvef/arktis-tweet-demo kullanılmıştır.
 
