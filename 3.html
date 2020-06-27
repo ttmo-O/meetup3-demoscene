@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="demo.css">
+        <meta http-equiv="refresh" content="5;url=./4.html"/>
+
+</head>
+<body>
+        <div class="fade-io-5">
+                <canvas id=c style="background-color: white;"></canvas>
+                <h5 class="spinner" style="position:absolute; top:30vw; right:5vw; color: grey; ">Buraya ne yazsam bilemiyorum</h5>
+        </div>
+
+        <script>
+                var c = document.querySelector("#c");
+                c.width = 1920;
+                c.height = 1080;
+                var S = Math.sin;
+                var C = Math.cos;
+                var T = Math.tan;
+                var R = function(r,g,b,a) {
+                 a = a === undefined ? 1 : a;
+                 return "rgba("+(r|0)+","+(g|0)+","+(b|0)+","+a+")";
+                };
+
+                var x = c.getContext("2d");
+                var startT = +new Date(); 
+
+                // https://www.dwitter.net/d/10433 by tomxor
+                function u(t) {
+                        x.fillRect(0,0,1e4,1e4)
+                        t+=16
+                        n=1200
+                        i=3768
+                        for(;i--;)x.clearRect(
+                        960+240 * S(i/n) * S(i+t/4),
+                        640-240 * C(i/n) / C(t*8/i)
+                        ,4,4)
+                }
+                
+                function loop() {
+                        requestAnimationFrame(loop);
+                        u((new Date() - startT) / 1000);
+                };
+
+                loop();
+        </script>
+</body>
+</html>

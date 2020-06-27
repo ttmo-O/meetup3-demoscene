@@ -1,0 +1,172 @@
+* {padding:0;margin:0;border:0;outline:0;overflow:hidden}
+canvas {
+        width: 100%;
+        background: white;
+}
+
+body {
+        background-color:black;
+}
+
+h1 {
+        font-family: monospace, monospace;
+        font-size: 5vw; /* vw (viewport) unit is for dynamic font size */
+}
+h2 {
+        font-family: monospace, monospace;
+        font-size: 4vw;
+}
+h3 {
+        font-family: monospace, monospace;
+        font-size: 3.5vw;
+}
+h4 {
+        font-family: monospace, monospace;
+        font-size: 2.5vw;
+}
+h5 {
+        font-family: monospace, monospace;
+        font-size: 1.5vw;
+}
+ 
+.fade-io-2 {
+        width:100%;
+        height: 100%;
+        -webkit-animation: fadeinout 2s linear forwards;
+        animation: fadeinout 2s linear forwards;
+        opacity: 0;
+}
+.fade-io-3 {
+        width:100%;
+        height: 100%;
+        -webkit-animation: fadeinout 3s linear forwards;
+        animation: fadeinout 3s linear forwards;
+        opacity: 0;
+}
+.fade-io-4 {
+        width:100%;
+        height: 100%;
+        -webkit-animation: fadeinout 4s linear forwards;
+        animation: fadeinout 4s linear forwards;
+        opacity: 0;
+}
+.fade-io-5 {
+        width:100%;
+        height: 100%;
+        -webkit-animation: fadeinout 5s linear forwards;
+        animation: fadeinout 5s linear forwards;
+        opacity: 0;
+}
+.fade-io-7 {
+        width:100%;
+        height: 100%;
+        -webkit-animation: fadeinout 7s linear forwards;
+        animation: fadeinout 7s linear forwards;
+        opacity: 0;
+}
+.fade-io-10 {
+        width:100%;
+        height: 100%;
+        -webkit-animation: fadeinout 10s linear forwards;
+        animation: fadeinout 10s linear forwards;
+        opacity: 0;
+}
+.fade-io-15 {
+        width:100%;
+        height: 100%;
+        -webkit-animation: fadeinout 15s linear forwards;
+        animation: fadeinout 15s linear forwards;
+        opacity: 0;
+}
+
+@-webkit-keyframes fadeinout {
+        5%  { opacity: 0 }
+        15% { opacity: 1 }
+        85% { opacity: 1 }
+        95% { opacity: 0 }
+}
+
+@keyframes fadeinout {
+        5%  { opacity: 0 }
+        15% { opacity: 1 }
+        85% { opacity: 1 }
+        95% { opacity: 0 }
+}
+
+.delayed-fadein-1 {
+        width:100%;
+        height: 100%;
+        -webkit-animation: delay 33s linear forwards;
+        animation: delay 33s linear forwards;
+        opacity: 0;
+}
+
+.delayed-fadein-3 {
+        width:100%;
+        height: 100%;
+        -webkit-animation: delay 100s linear forwards;
+        animation: delay 100s linear forwards;
+        opacity: 0;
+}
+
+@-webkit-keyframes delay{
+        3%  { opacity: 0 }
+        5% { opacity: 1 }
+        95% { opacity: 1 }
+}
+
+@keyframes delay{
+        3%  { opacity: 0 }
+        5% { opacity: 1 }
+        95% { opacity: 1 }
+}
+
+.redblue {
+        animation: redblue 1s infinite;
+}
+
+@-webkit-keyframes redblue {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+@keyframes redblue {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+
+
+.rainbow {
+        animation: rainbow 1s infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0% { color: red; }
+    15% { color: yellow; }
+    30% { color: orange; }
+    45% { color: green; }
+    60% { color: blue; }
+    75% { color: cyan; }
+    90% { color: purple; }
+    100% { color: red; }
+}
+@keyframes rainbow {
+    0% { color: red; }
+    15% { color: yellow; }
+    30% { color: orange; }
+    45% { color: green; }
+    60% { color: blue; }
+    75% { color: cyan; }
+    90% { color: purple; }
+    100% { color: red; }
+}
+
+.spinner {
+    -webkit-animation:spin 19s linear infinite;
+    -moz-animation:spin 19s linear infinite;
+    animation:spin 19s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

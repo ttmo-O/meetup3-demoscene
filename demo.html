@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+
+        <button onclick="playAudio()" style="cursor: pointer;">
+                <h1 style="position:absolute; top:50%; left:70%; color: white;">START</h1>
+        </button>
+
+        <audio autoplay id="music">
+                <source src="REiS-DiskDigger-kg.mp3" type="audio/mpeg">
+                Exit the cave and update your browser.
+        </audio>
+
+
+        <script>
+                var music = document.getElementById('music');
+
+                function playAudio() {
+                        if (music.paused) {
+                                window.open('./0.html','_blank');
+                                music.play();
+                        } else {
+                                music.pause();
+                        }
+                }
+        </script>
+
+</body>
+</html>

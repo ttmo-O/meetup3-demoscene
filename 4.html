@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="demo.css">
+
+</head>
+<body>
+        
+        <div class="delayed-fadein-1">
+                <canvas id=c style="background-color: white;"></canvas>
+                <h4 style="position:absolute; top:29vw; left:1vw; color:lightgray;">konuşmacı / <em style="color:cyan;">"konu"</em></h4>
+        </div>
+
+        <script>
+                var c = document.querySelector("#c");
+                c.width = 1920;
+                c.height = 1080;
+                var S = Math.sin;
+                var C = Math.cos;
+                var T = Math.tan;
+                var R = function(r,g,b,a) {
+                 a = a === undefined ? 1 : a;
+                 return "rgba("+(r|0)+","+(g|0)+","+(b|0)+","+a+")";
+                };
+
+                var x = c.getContext("2d");
+                var startT = +new Date(); 
+
+                // https://www.dwitter.net/d/4136 by exca
+                function u(t) {
+                        t/=4;for(i=0;i<1100;i++){d=C(t+i),s=i==0?2920:9-d*8;x.fillStyle=R(i,i,i,0.2);x.fillRect(S(t*2.5+i)*220*S(C(t)+i%50)+960*(i==0?-1:1),i,s,s);}
+                };
+
+                function loop() {
+                        requestAnimationFrame(loop);
+                        u((new Date() - startT) / 1000);
+                };
+
+                loop();
+        </script>
+</body>
+</html>

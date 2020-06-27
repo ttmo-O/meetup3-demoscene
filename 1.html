@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="demo.css">
+        <meta http-equiv="refresh" content="10;url=./2.html" />
+
+</head>
+<body>
+
+        <div class="fade-io-10">
+                <canvas id=c style="background-color: white;"></canvas>
+                <div style="position:absolute; top:20vw; right:0%; padding-right:2%; text-align: right; color:white;">
+                        <h5 style="color: gray; letter-spacing: 0.63vw"> 7 HAZİRAN 2020 </h5>
+                        <h2 style="color: red;"> MEETUP #3</h2>
+                        <br>
+                        <div style="color:fuchsia;" class="delayed-fadein-3">
+                                <h5 style="letter-spacing: 1.25vw"> <em>olağandışı</em> </h5>
+                                <h5 style="letter-spacing: 1.25vw"> <em>toplantı</em> </h5>
+                        </div>
+                </div>
+        <div> 
+
+        <script>
+                var c = document.querySelector("#c");
+                c.width = 1920;
+                c.height = 1080;
+                var S = Math.sin;
+                var C = Math.cos;
+                var T = Math.tan;
+                var R = function(r,g,b,a) {
+                 a = a === undefined ? 1 : a;
+                 return "rgba("+(r|0)+","+(g|0)+","+(b|0)+","+a+")";
+                };
+
+                var x = c.getContext("2d");
+                var startT = +new Date(); 
+
+                // https://www.dwitter.net/d/17876 by jylikangas
+                function u(t) {
+                        for(W=i=688;i--;x.clearRect(W+q*C(m=i*W+t)/T*W,W+(4+C(t))*S(i)/T*W,T=q*S(m)+9,T))x.fillRect(0,i*2,2e3,1.3),q=6+5*C(i)
+                }
+
+                
+                function loop() {
+                        requestAnimationFrame(loop);
+                        u((new Date() - startT) / 1000);
+                };
+
+
+                loop();
+        </script>
+</body>
+</html>

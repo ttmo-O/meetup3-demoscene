@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="demo.css">
+
+        <meta http-equiv="refresh" content="10;url=./1.html" />
+
+</head>
+<body>
+
+        <div class="fade-io-10">
+                <img class="spinner" style="position: absolute; left: 42.40vw; top: 17.36vw; width: 15.5vw" src="logo-yuvarlak-beyaz-incecerceve.png" id="logo">
+                <canvas id=c style="background-color: white;"></canvas>
+        <div> 
+
+        <script>
+                var c = document.querySelector("#c");
+                c.width = 1920;
+                c.height = 1080;
+                var S = Math.sin;
+                var C = Math.cos;
+                var T = Math.tan;
+                var R = function(r,g,b,a) {
+                 a = a === undefined ? 1 : a;
+                 return "rgba("+(r|0)+","+(g|0)+","+(b|0)+","+a+")";
+                };
+
+                var x = c.getContext("2d");
+                var startT = +new Date();
+
+
+                // https://www.dwitter.net/d/5056 by ellisk1
+                function u(t) {
+                        t=t/3
+                        x.fillRect(0,0,q=c.width=2e3,q);for(i=q;i--;){r=160+(i/1e2)**4/t;z=6*S(i)+t*i/r;x.fillStyle="#fff";x.fillRect(1e3+C(z)*r,500+S(z)*r,5,5)}
+                }
+
+                
+                function loop() {
+                        requestAnimationFrame(loop);
+                        u((new Date() - startT) / 1000);
+                };
+
+
+                loop();
+        </script>
+</body>
+</html>
